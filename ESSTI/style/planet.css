@@ -1,0 +1,269 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    padding:0;
+}
+html{
+    font-size: 10px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color:#312bd999;
+    & div{
+        & #logo{
+            margin-left: 30px;
+            margin-top: 10px;
+            width: 50px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        & #logo_name{
+            color: white;
+            font-size: 1.5rem;
+            position: relative;
+            bottom: 15px;
+            font-weight: bold;
+        }
+    }
+    & nav{
+        margin: 10px 20px;
+        & ul{
+            display: flex;
+            gap: 20px;
+            & li{
+            list-style-type: none;
+            & a{
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: white;
+            }
+            }
+        }
+
+    }
+    & input{
+        height: 30px;
+        margin: 10px 0;
+        background-color:#f2490c;
+        border: none;
+        border-radius: 5px;
+        color: white;
+    }
+}
+
+#nav-toggler{
+    cursor: pointer;
+    display: none;
+    position: relative;
+    right: 3rem;
+    font-size: 2.5rem;
+    top: 15px;
+    color: white;
+}
+#nav-drop{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 80px;
+    width: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: -1px 1px 5px 0px;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    & li{
+        font-size: 1.5rem;
+        padding: 0.8rem;
+        margin-right: 2rem;
+        display: flex;
+        justify-content: center;
+        & a{
+            color: white;
+            text-decoration: none;
+        }
+    
+    }
+}
+.bg{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    & h1{
+        font-size: 5rem;
+    }
+}
+.planet{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-image:url(/images/planet-bg.jpg);
+    & h1{
+    position: absolute;
+    top: 50%; 
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 8rem;
+    color: white;
+    }
+    
+}
+#mercury{
+    background-image: url(/images/mercury.jpg);
+    
+}
+
+    
+.narative{
+    max-width: 900px;
+    max-height: 500px;
+    width: 80%;
+    height: 40%;
+    font-size: 1.9rem;
+    
+}
+.concise{
+    margin: 0 auto;
+    max-width:900px;
+    width: 50%;
+    text-align: center;
+    & h2{
+        position: relative;
+        left: 20px;
+        font-size: 2rem;
+    }
+    & ul li{
+        display: block;
+        font-size: 1.9rem;
+        & span{
+            font-weight: bold;
+        }
+    }
+    
+}
+#venus{
+    background-image: url(/images/venus.jpg);
+}
+#earth{
+    background-image: url(/images/earth.jpg);
+
+}
+#mars{
+    background-image: url(/images/mars.webp);
+}
+#jupiter{
+    background-image: url(/images/jupiter.png);
+
+}
+#saturn{
+    background-image: url(/images/saturn.webp);
+
+}
+#uranus{
+    background-image: url(/images/uranus.jpg);
+
+}
+#neptune{
+    background-image: url(/images/neptune.jpg);
+
+}
+.footer{
+    display: flex;
+    background-color: #f2e7dc;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    
+    & .vision{
+        width: 30%;
+        margin:0 20px;
+        & h1{
+            text-align:center;
+            font-size: 2.5rem;
+        }
+    }
+    & .mission{
+        width: 30%;
+        margin:0 20px;
+        & h1{
+            text-align:center;
+            font-size: 2.5rem;
+        }
+    }
+    & .social-media{
+        margin:0 20px;
+        & h1{
+            text-align:center;
+            font-size: 2.5rem;
+        }
+       & i{
+         margin: 10px;
+         font-size: 2.5rem;
+       }
+    }
+}
+#copy-right{
+    background-color: #191919;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    & p{
+        width: 100%;
+        text-align: center;
+    }
+    & #institute{
+        margin-bottom: -5px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    header{
+        justify-content: space-between;
+    }
+    #nav-toggler{
+        display: block;
+    }
+    .bg{
+        height: auto;
+        & h1{
+            font-size: 3rem;
+        }
+    }
+    .narative{
+        font-size: 1.7rem;
+        margin-top: 100px;
+    }
+    nav{
+        display: none;
+    }
+    .concise{
+        & h2{
+            font-size: 1.8rem;
+        }
+       & ul li{
+        font-size: 1.5rem;
+    }
+    }
+}

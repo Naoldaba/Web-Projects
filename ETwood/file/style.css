@@ -1,0 +1,246 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: black;
+    overflow-x: hidden;
+}
+:root{
+    --web-color:#55dd33
+}
+h1{
+    color: var(--web-color);
+    font-family: helvetica, sans-serif;
+}
+h5{
+    color: white;
+}
+p{
+    color: white;
+}
+
+.sec-1{
+    background-image: url(/img/background.avif);
+    background-position: center;
+    opacity: 0.3;
+    height: 100vh;
+    overflow: hidden;
+}
+nav{
+    position: absolute;
+    width: 100%;
+    top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    & h1{
+        color: var(--web-color);
+        font-size: 2.5rem;
+    }
+    & button{
+        width: 80px;
+        height: 30px;
+        margin-top: 50px;
+        font-weight: bold;
+        background-color: var(--web-color);
+        border-radius: 5px;
+        border:none;
+    }
+}
+#pro-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+#promotion{
+    font-size: 2.5rem;
+}
+.featured{
+    margin-top: 80px;
+    & h1{
+        padding-left: 20px;
+        width: 100%;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    & div{
+        width: 19%;
+        aspect-ratio: 1/1.5;
+        & img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        & h5{
+            margin:5px 5px;
+        }
+        & button{
+            background-color: var(--web-color);
+            border: none;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+    }
+    
+}
+
+.sec-2{
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 25px;
+    margin-top: 40px;
+    & .flexing-1{
+        padding:0 20px 0 20px;
+        width: 70%;
+        & .trending{          
+            display: grid;
+            grid-template-columns: repeat(5,18%);
+            grid-template-rows: repeat(4,27%);
+            column-gap: 20px;
+            & div{
+                width: 100%;
+                aspect-ratio: 1/1.5;
+                & img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                }
+                & h5{
+                    margin:5px 5px;
+                }
+                & button{
+                    background-color: var(--web-color);
+                    border: none;
+                    border-radius: 5px;
+                    margin: 0 5px 7px 5px;
+                }
+
+            }
+        }
+        & .latesttvshows{
+            display:grid;
+            grid-template-columns: repeat(5, 18%);
+            grid-auto-rows: auto;
+            column-gap: 20px;
+            & div{
+                width: 100%;
+                aspect-ratio: 1/1.5;
+                & img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                }
+            }
+            & h5{
+                margin:5px 5px;
+            }
+            & button{
+                background-color: var(--web-color);
+                border: none;
+                border-radius: 5px;
+                margin: 7px 5px;
+            }
+        }
+    }
+
+    & .flexing-2{
+        width: 23%;
+        position:relative;
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        & .fle{
+            display: flex;
+            width: 100%;
+            aspect-ratio: 1/0.2;
+            
+            & img{
+                width: 30%;
+                height: 100%;
+                border-radius: 10px;
+            }
+            & div{
+                & h5{
+                    margin: 10px 10px;
+                }
+            }
+        }
+    }
+}
+#tvshows{
+    margin-top: 130px;
+}
+.unique{
+    color:#f2490c;
+}
+.last{
+    background-color: #b9b9b9;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    & #first{
+        padding: 10px;
+        width: 30%;
+        color: black;
+    }
+    & #second{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white;
+        width: 30%;
+        padding: 10px;
+        color: black;
+    }
+}
+.social-media{
+    color: white;
+    color: black;
+    & i{
+        margin:0 10px;
+    }
+    & h1{
+        color: black;
+    }
+}
+#copyright{
+    text-align: center;
+    width: 100%;
+    color: black;
+}
+@media  screen and (max-width: 1040px){
+    .sec-2{
+        & .flexing-1{
+            width: 100%;
+        }
+        & .flexing-2{
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    .sec-2{
+        .flexing-1{
+            width: 100%;
+            & .trending{
+                display: grid;
+                grid-template-columns: repeat(2, 50%);
+                grid-template-rows: repeat(10,10%);
+            }
+            & .latesttvshows{
+                display: grid;
+                grid-template-columns: repeat(2,50%);
+                grid-template-rows: repeat(5,1fr);
+            }
+        }
+        
+
+        
+    }
+}
